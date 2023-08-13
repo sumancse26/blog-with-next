@@ -1,5 +1,8 @@
+import data from '@/data/blogData.json';
+import Image from 'next/image';
 import Link from 'next/link';
 import Style from './blogPage.module.css';
+
 const Blog = () => {
 	return (
 		<>
@@ -9,27 +12,17 @@ const Blog = () => {
 						Blog List
 					</h1>
 					<ul className={Style.blogList}>
-						<li className="p-1">
-							<Link href="/blog/1">Blog 1</Link>
-						</li>
-						<li className="p-1">
-							<Link href="/blog/2"> Blog 2</Link>
-						</li>
-						<li className="p-1">
-							<Link href="/blog/3">Blog 3</Link>
-						</li>
-						<li className="p-1">
-							<Link href="/blog/4">Blog 4</Link>
-						</li>
-						<li className="p-1">
-							<Link href="/blog/5">Blog 5</Link>
-						</li>
+						{data.map((item, index) => (
+							<li key={item.id} className="p-1">
+								<Link href={`/blog/${item.id}`}>
+									{index + 1}. {item.title}
+								</Link>
+							</li>
+						))}
 					</ul>
 				</div>
-				<div className="col-span-3 ">
-					<h1 className="flex justify-center py-5 border-b-2 border-sky-700 text-2xl tracking-wider text-emerald-900">
-						Blog Details
-					</h1>
+				<div className="col-span-3 h-full w-full object-cover">
+					<Image src="/4380.jpg" width={1000} height={1000} alt="Image" className="object-cover" />
 				</div>
 			</div>
 		</>

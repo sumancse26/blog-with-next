@@ -11,7 +11,7 @@ export default function Home() {
 						quasi. In deleniti eaque aut repudiandae et a id nisi.
 					</p>
 					<Link href="/blog">
-						<button className="btn btn-secondary tracking-widest">Blog Page</button>
+						<button className="btn btn-secondary tracking-widest">Go Blog Page</button>
 					</Link>
 				</div>
 			</div>
