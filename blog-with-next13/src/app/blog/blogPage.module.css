@@ -1,0 +1,17 @@
+.blogList{
+
+    font-size: 15px;
+    padding: 20px;
+    letter-spacing:2px;
+}
+.blogList li{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.blogList li:hover{
+    color: #f59e0b;
+    background: #fef08a;
+    cursor: pointer;
+}
